@@ -1,13 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 body {
-  background: linear-gradient(236.85deg, #041832 27.26%, #3468a7 96.03%);
+  background-image: url("https://www.gorspa.org/wp-content/uploads/Software.jpg");
+  background-size: cover;
   font-family: "Roboto", sans-serif;
 }
 
 .container {
   background: #ecf4ff;
   color: #1c1c1c;
+  opacity: 0.9;
   margin: 64px;
   border-radius: 20px;
   box-shadow: 6px 6px 6px #0e1d2f;
@@ -26,7 +28,7 @@ body {
 .perfil-foto {
   border-radius: 460px;
   max-height: 160px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
 .titulo {
@@ -54,7 +56,17 @@ body {
   border: 2px solid #0e1d2f;
 }
 
+.portfolio {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+}
+
 .projetos {
+  max-height: 300px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
   display: flex;
   flex-direction: column;
   background: linear-gradient(230.65deg, #499cfe 27.49%, #9cc8fc 83.19%);
@@ -64,39 +76,89 @@ body {
   border-radius: 20px;
 }
 
-.projetos-titulo {
-  list-style: none;
-  font-weight: 700;
-  font-size: 36px;
+.conquistas {
+  height: 300px;
+  overflow: scroll;
+  scrollbar-width: thin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 32px;
+  margin-top: 32px;
+  background: linear-gradient(230.65deg, #499cfe 27.49%, #9cc8fc 83.19%);
+  box-shadow: 2px 2px 4px rgba(16, 16, 16, 0.42);
+  border-radius: 20px;
 }
 
-.projetos-item {
+.projetos ul {
+  list-style: none;
+  padding-left: 0;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.projetos li {
   list-style-type: none;
-  font-weight: 400;
   font-size: 24px;
   line-height: 48px;
 }
 
-.projetos-item a {
-  color: #1c1c1c;
-  text-decoration: none;
+.conquistas ul {
+  list-style: none;
+  padding-left: 0;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.conquistas li {
+  list-style-type: none;
+}
+
+.conquistas img {
+  max-height: 100px;
 }
 
 .dark {
-  background: linear-gradient(236.85deg, #375b86 27.26%, #6b87a9 96.03%);
+  background-image: url("https://www.gorspa.org/wp-content/uploads/Software.jpg");
+  background-size: cover;
 }
 
 .dark .container {
   background: #333439;
   color: #f7f7f7;
+  opacity: 0.9;
 }
 
-.dark .projetos {
+.dark .portfolio {
   color: #1c1c1c;
 }
 
 .dark .tema button {
   background: #1c1c1c;
   color: #ffffff;
+  box-sizing: border-box;
+  border-radius: 100px;
   border: 2px solid #f7f7f7;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1c1c1c;
+  border: 1.8px solid #1c1c1c;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb: hover {
+  background: #ecf4ff;
+}
+
+::-webkit-scrollbar-track {
+  background: #ecf4ff;
+  border-radius: 100px;
+  box-shadow: inset 0px 0px 0px 0px #f0f0f0;
+  margin: 15px 0px;
 }
