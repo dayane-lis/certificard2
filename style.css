@@ -152,7 +152,7 @@ body {
   border-radius: 100px;
 }
 
-::-webkit-scrollbar-thumb: hover {
+::-webkit-scrollbar-thumb:hover {
   background: #ecf4ff;
 }
 
